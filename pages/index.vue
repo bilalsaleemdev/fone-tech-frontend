@@ -18,6 +18,17 @@ import Logo from "~/components/Logo.vue";
 export default {
   components: {
     Logo
+  },
+  methods: {
+    login() {
+      this.$store.dispatch("authenticate", {
+        user_name: "superadmin",
+        password: "123456"
+      });
+    }
+  },
+  created() {
+    // this.login();
   }
 };
 </script>
